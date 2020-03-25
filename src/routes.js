@@ -9,6 +9,7 @@ routes.post('/ongs', OngController.store);
 
 routes.get('/incidents', IncidentController.index);
 routes.post('/incidents', IncidentController.store);
+routes.delete('/incidents/:id', IncidentController.destroy);
 
 
 module.exports = routes;
