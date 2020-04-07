@@ -18,6 +18,22 @@ module.exports = {
     useNullAsDefault: true
   },
 
+  test: {
+    client: process.env.TEST_CLIENT,
+    connection: {
+      host: process.env.TEST_HOST_DB,
+      port: process.env.TEST_PORT_DB,
+      database: process.env.TEST_DATABASE,
+      user: process.env.TEST_USER_DB,
+      password: process.env.TEST_PASSWORD_DB,
+      ssl: true
+    },
+    migrations: {
+      directory: './src/database/migrations'
+    },
+    useNullAsDefault: true
+  },
+
   staging: {
     client: 'postgresql',
     connection: {
