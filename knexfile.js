@@ -4,14 +4,7 @@ module.exports = {
 
   development: {
     client: process.env.CLIENT,
-    connection: {
-      host: process.env.HOST_DB,
-      port: process.env.PORT_DB,
-      database: process.env.DATABASE,
-      user: process.env.USER_DB,
-      password: process.env.PASSWORD_DB,
-      ssl: true
-    },
+    connection: process.env.PG_CONNECTION_STRING,     
     migrations: {
       directory: './src/database/migrations'
     },
